@@ -4,7 +4,7 @@ import logger from "../logging/Logger";
 
 describe("PageHomeBookingCare", () => {
     before("Open web", async () => {
-        await browser.url("https://bookingcare.vn");
+        await browser.url("https://bookingcare.vn"); // mấy cái link này nên tạo 1 class để chứa nó, mấy nữa chạy ở admin.bookingcare.vn thì ngồi thay cả ngày
         await browser.maximizeWindow();
     });
     beforeEach("Open web", async () => {
