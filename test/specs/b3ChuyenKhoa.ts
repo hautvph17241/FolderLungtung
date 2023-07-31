@@ -1,6 +1,6 @@
 describe('Tesst tinh anng', () => {
     beforeEach('check it', async () => {
-        await browser.url('https://dev.bookingcare.vn/co-xuong-khop-s1')
+        await browser.url('https://dev.bookingcare.vn/co-xuong-khop-s1') // y vậy, cần đặt 1 file properties để chứa các biến kiểu vầy
         browser.maximizeWindow();
     });
     it('check abc', async () => {
@@ -8,6 +8,7 @@ describe('Tesst tinh anng', () => {
             return document.querySelector("img[alt='Bác sĩ Chuyên khoa I Bùi Thanh Tùng']");
         })
         console.log(naturalWdith)
+        //browser.executeScript("return document.querySelector("img[alt='Bác sĩ Chuyên khoa I Bùi Thanh Tùng']").naturalWidth") 
     })
     it('check image null', async () => {
 
