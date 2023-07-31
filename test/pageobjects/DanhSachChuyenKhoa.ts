@@ -1,5 +1,8 @@
 
-class DanhSachChuyenKhoa {
+class DanhSachChuyenKhoa { // Nên đổi tên thành ChuyenKhoaPageObject
+    // Mấy cái text locator nên tách ra chứ về sau main tain cực khó, tưởng tượng nếu locator đó được sử dụng cho 5 hàm, mà dev thay đổi locator trong code dev thì sao ? Ngồi sửa 5 hàm thay vì chỉ cần sửa 1 chỗ String bên dưới ah
+    // VD: String coXuongKhopTitleButton = //div[@class='chuyenkhoa-ds']//h3[contains(text(),'Cơ Xương Khớp')]
+    // private openChuyenKhoaCoXuongKhop() { return $(coXuongKhopTitleButton) }; 
     private openChuyenKhoaCoXuongKhop() { return $("//div[@class='chuyenkhoa-ds']//h3[contains(text(),'Cơ Xương Khớp')]") };
     get titleChuyenKhoa() { return $('.chuyenkhoa-modau>h1'); }
     get descripstionChuyenKhoa() { return $('.chuyenkhoa-gioithieu.docthem-noidung') }
@@ -13,7 +16,7 @@ class DanhSachChuyenKhoa {
     get navbarElement() { return $("//nav[@class='trinhdon phai']") }
     get elementBacSi() {
         return $('#lkbs')
-    }
+    } // Này ko phải ở page chuyenkhoa
     get() { return $$('.mot-bs-thongtin div div h2 a') }
 
 
