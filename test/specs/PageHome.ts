@@ -10,11 +10,11 @@ describe("PageHomeBookingCare", () => {
     beforeEach("Open web", async () => {
 
 
-        const h1Text = $('/html/body/main/div[1]/div/div[1]/div/h1');
-        const timeout = 2000;
+        const h1Text = $('/html/body/main/div[1]/div/div[1]/div/h1'); // đoạn này quên sửa phải k, sao ko dùng div.vung-bao h1
+        const timeout = 2000; // quá phí ram để chứa timeout, đẩy thẳng 2000 xuống dưới em
         try {
             h1Text.waitForDisplayed({ timeout });
-            console.log("d: ", await h1Text.getText());
+            console.log("d: ", await h1Text.getText()); // đoạn này log vào cẩn thận em, d là sao
 
         } catch (error) {
             console.error("Không thấy phần tử hiển thị");
@@ -23,7 +23,7 @@ describe("PageHomeBookingCare", () => {
     })
     it("check URL href 4 header", async () => {
         const menu = $('.menu-dautrang');
-        const linkElement = await menu.$$('li a');
+        const linkElement = await menu.$$('li a'); // sao ko gộp menu + linkElement lại nhỉ
         const linkMenuDauTrang = [
             '/#chuyenkhoa',
             '/co-so-y-te/tat-ca',
